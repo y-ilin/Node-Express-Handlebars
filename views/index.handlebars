@@ -1,39 +1,69 @@
-<h1>Eat-le-Burger!</h1>
+<h1 id="pageTitle">Eat-Da-Burger!</h1>
 
-<h2>Burgers waiting to be devoured</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
-        <button class="eat-burger" data-id="{{this.id}}" data-newdevoured="true">Devour it!</button>
-    </li>
+<div class="row">
+    <div class="col col-12 col-md-6">
+        <div class="row">
+            <div class="col col-12">
+                <h3 class="sectionTitle">Burgers waiting to be devoured</h3>
+            </div>
+            <div class="col col-12">
+                <ul class="burgerList">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>
+                        <span class="emoji">🍔</span> {{burger_name}}
+                        <button class="eat-burger btn btn-danger" data-id="{{this.id}}" data-newdevoured="true">🔥
+                            Devour it!</button>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers eaten up</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{burger_name}}
-        {{!-- <button class="eat-burger" data-id="{{this.id}}" data-newdevoured="false">Devour it!</button> --}}
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Create a burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burgerName">Burger Name:</label>
-        <input type="text" id="burgerName" name="name">
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <div class="col col-12 col-md-6">
+        <div class="row">
+            <div class="col col-12">
+                <h3 class="sectionTitle">Burgers eaten up</h3>
+            </div>
+            <div class="col col-12">
+                <ul class="burgerList">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        <span class="emoji">🦴</span> {{burger_name}}
+                        <button class="eat-burger btn btn-warning" data-id="{{this.id}}"
+                            data-newdevoured="false">Reorder!!</button>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12">
+        <div class="row">
+            <div class="col col-12">
+                <h3 class="sectionTitle" id="createTitle">Create a burger</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-12">
+                <form class="create-form">
+
+                    <div class="form-group">
+                        <label for="burgerName">Burger Name:</label>
+                        <input type="text" id="burgerName" name="name">
+                    </div>
+
+                    <button type="submit" class="btn btn-warning">Add Burger</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

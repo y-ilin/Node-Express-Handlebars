@@ -1,0 +1,51 @@
+* {
+  font-family: "Inconsolata", monospace;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 25, 25, 0.3) !important;
+  color: rgb(228, 0, 0) !important;
+}
+
+/*********************** Header Styling ***********************/
+#pageTitle {
+  text-align: center;
+  margin: 5vh 0 2vh 0;
+}
+
+/********************** Burgers Styling ***********************/
+.sectionTitle {
+  padding-left: 5vw;
+  margin: 5vh 0 2vh 0;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.burgerList {
+  font-size: 19px;
+  margin: 0 2vw;
+}
+
+.emoji {
+  font-size: 1.2em;
+}
+
+/******************* Create Burger Styling ***********************/
+#createTitle {
+  text-align: center;
+  padding: 0px;
+}
+
+.create-form {
+  text-align: center;
+  font-size: 19px;
+}
+
+.btn {
+  border: 1px rgba(153, 47, 29) solid !important;
+}
