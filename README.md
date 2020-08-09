@@ -20,6 +20,7 @@ npm i
 
 ## Usage
 The deployed application is [here](https://damp-lowlands-67480.herokuapp.com/).
+
 The application will look something like this:
 ![Application Screenshot](./public/assets/img/application-screenshot.png)
 
